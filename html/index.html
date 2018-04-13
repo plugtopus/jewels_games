@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+
+<head>
+  <link rel="stylesheet" href="../css/bootstrap.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/styles.css" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Bungee+Shade" rel="stylesheet">
+  <script src="../js/jquery-3.3.1.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/scripts.js"></script>
+  <meta charset="utf-8">
+  <title>Plugtopuzzle!</title>
+
+</head>
+
+<body>
+  <div class="container">
+    <div id="instructions" class="modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Как играть?</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Цель состоит в том, чтобы сделать линии, горизонтально или вертикально, из трех или более подходящих камней.
+              Поменяйте две смежные части, и если вы сделаете линию из трех или более штук, она исчезнет, и новые предметы
+              упадут на доску. Чем больше матчей вы делаете, тем выше ваш балл. Нажмите на кнопку
+              <span>Plugtopuzzle</span> для новой игры, если у вас закончились ходы</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h1>Plugtopuzzle!</h1>
+    <div class="jewels">
+      <button class="jewel btn" type="button" value="normal">Regular</button>
+      <button class="jewel btn" type="button" value="drwho">Doctor Who</button>
+      <button class="jewel btn" type="button" value="harry">Harry Potter</button>
+      <button class="jewel btn" type="button" value="zelda">Zelda</button>
+      <button class="jewel btn" type="button" value="mario">Mario</button>
+    </div>
+    <div class="hidden">
+      <table>
+        <tr>
+          <th colspan=7> Счет:
+            <span id="game-score">0</span>
+          </th>
+        </tr>
+        <tr>
+          <td class="cell" id="0-6"></td>
+          <td class="cell" id="1-6"></td>
+          <td class="cell" id="2-6"></td>
+          <td class="cell" id="3-6"></td>
+          <td class="cell" id="4-6"></td>
+          <td class="cell" id="5-6"></td>
+          <td class="cell" id="6-6"></td>
+        </tr>
+        <tr>
+          <td class="cell" id="0-5"></td>
+          <td class="cell" id="1-5"></td>
+          <td class="cell" id="2-5"></td>
+          <td class="cell" id="3-5"></td>
+          <td class="cell" id="4-5"></td>
+          <td class="cell" id="5-5"></td>
+          <td class="cell" id="6-5"></td>
+        </tr>
+        <tr>
+          <td class="cell" id="0-4"></td>
+          <td class="cell" id="1-4"></td>
+          <td class="cell" id="2-4"></td>
+          <td class="cell" id="3-4"></td>
+          <td class="cell" id="4-4"></td>
+          <td class="cell" id="5-4"></td>
+          <td class="cell" id="6-4"></td>
+        </tr>
+        <tr>
+          <td class="cell" id="0-3"></td>
+          <td class="cell" id="1-3"></td>
+          <td class="cell" id="2-3"></td>
+          <td class="cell" id="3-3"></td>
+          <td class="cell" id="4-3"></td>
+          <td class="cell" id="5-3"></td>
+          <td class="cell" id="6-3"></td>
+        </tr>
+        <tr>
+          <td class="cell" id="0-2"></td>
+          <td class="cell" id="1-2"></td>
+          <td class="cell" id="2-2"></td>
+          <td class="cell" id="3-2"></td>
+          <td class="cell" id="4-2"></td>
+          <td class="cell" id="5-2"></td>
+          <td class="cell" id="6-2"></td>
+        </tr>
+        <tr>
+          <td class="cell" id="0-1"></td>
+          <td class="cell" id="1-1"></td>
+          <td class="cell" id="2-1"></td>
+          <td class="cell" id="3-1"></td>
+          <td class="cell" id="4-1"></td>
+          <td class="cell" id="5-1"></td>
+          <td class="cell" id="6-1"></td>
+        </tr>
+        <tr>
+          <td class="cell" id="0-0"></td>
+          <td class="cell" id="1-0"></td>
+          <td class="cell" id="2-0"></td>
+          <td class="cell" id="3-0"></td>
+          <td class="cell" id="4-0"></td>
+          <td class="cell" id="5-0"></td>
+          <td class="cell" id="6-0"></td>
+        </tr>
+      </table>
+      <button id="bedazzle" class="btn">Plugtopuzzle!</button>
+      <button id="choose" class="btn">Сменить игру</button>
+    </div>
+  </div>
+</body>
+
+</html>
